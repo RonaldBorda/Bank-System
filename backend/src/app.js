@@ -5,6 +5,7 @@ const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const accountRoutes = require('./routes/account.routes');
 const transactionRoutes = require('./routes/transaction.routes');
+const paymentRoutes = require('./routes/payment.routes');
 const app = express();
 
 app.use(cors());
@@ -14,4 +15,5 @@ app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/account', accountRoutes);
 app.use('/api/transaction', transactionRoutes);
+app.use('/api/payment', paymentRoutes);
 module.exports = app;      
