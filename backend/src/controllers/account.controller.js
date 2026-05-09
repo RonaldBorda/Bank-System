@@ -37,7 +37,25 @@ const createAccount = async (req, res) => {
     }
 
 };
+const getAccounts = async (req, res) => {
 
+    try {
+
+        const accounts = await Account.find({
+            usuario: req.user.id
+        });
+
+        res.json(accounts);
+
+    } catch (error) {
+
+        res.status(500).json({
+            message: error.message
+        });
+
+    }
+
+};
 module.exports = {
-    createAccount
+    createAccount, getAccounts
 };
