@@ -38,7 +38,29 @@ const createTransaction = async (req, res) => {
     }
 
 };
+const getTransactions = async (req, res) => {
 
+    try {
+
+        const { cuentaId } = req.params;
+
+        const transactions = await Transaction.find({
+            cuenta: cuentaId
+        }).sort({
+            createdAt: -1
+        });
+
+        res.json(transactions);
+
+    } catch (error) {
+
+        res.status(500).json({
+            message: error.message
+        });
+
+    }
+
+};
 module.exports = {
-    createTransaction
+    createTransaction, getTransactions
 };
