@@ -4,6 +4,7 @@ const testRoutes = require('./routes/test.routes');
 const authRoutes = require('./routes/auth.routes');
 const userRoutes = require('./routes/user.routes');
 const accountRoutes = require('./routes/account.routes');
+const transactionRoutes = require('./routes/transaction.routes');
 const app = express();
 
 app.use(cors());
@@ -12,4 +13,5 @@ app.use('/api', testRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/account', accountRoutes);
+app.use('/api/transaction', transactionRoutes);
 module.exports = app;      
