@@ -1,0 +1,78 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+
+    <app-sidebar></app-sidebar>
+
+    <div class="content">
+
+        <div class="payment-card">
+
+            <h2>Pago de servicios</h2>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Servicio</mat-label>
+
+                <mat-select [(ngModel)]="servicio">
+
+                    <mat-option value="luz">Luz</mat-option>
+
+                    <mat-option value="agua">Agua</mat-option>
+
+                    <mat-option value="internet">Internet</mat-option>
+
+                    <mat-option value="telefonia">Telefonía</mat-option>
+
+                    <mat-option value="universidad">Universidad</mat-option>
+
+                    <mat-option value="tarjeta_credito">Tarjeta</mat-option>
+
+                    <mat-option value="recarga_movil">Recarga móvil</mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Cuenta origen</mat-label>
+
+                <mat-select [(ngModel)]="cuentaOrigenId">
+
+                    <mat-option
+                        *ngFor="let account of accounts"
+                        [value]="account._id">
+
+                        {{ account.numeroCuenta }}
+
+                    </mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Monto</mat-label>
+ 
+                <input
+                    matInput
+                    type="number"
+                    [(ngModel)]="monto">
+
+            </mat-form-field>
+
+            <button
+                class="payment-button"
+                (click)="payService()">
+
+                Realizar pago
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

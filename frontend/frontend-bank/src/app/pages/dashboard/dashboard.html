@@ -6,9 +6,61 @@
 
     <div class="content">
 
-        <h1>Bienvenido</h1>
+        <h1>Panel Financiero</h1>
+ 
+        <div class="cards-container">
+     
+            <div class="bank-card" *ngFor="let account of accounts">
+          
+                <h2>
+                    Cuenta {{ account.tipoCuenta }}
+                </h2>
+          
+                <p class="saldo">
+                    S/ {{ account.saldo }}
+                </p>
+        
+                <span>
+                    {{ account.numeroCuenta }}
+                </span>
+        
+            </div>
+        
+        </div>
 
-        <p>Panel principal bancario</p>
+        <div class="section">
+
+            <h2>Movimientos recientes</h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Monto</th>
+                        <th>Descripción</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let transaction of transactions">
+                
+                        <td>{{ transaction.tipo }}</td>
+                
+                        <td>S/ {{ transaction.monto }}</td>
+                
+                        <td>{{ transaction.descripcion }}</td>
+                
+                    </tr>
+                
+                </tbody>
+
+            </table>
+
+        </div>
 
     </div>
 

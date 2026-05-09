@@ -1,13 +1,15 @@
 <mat-toolbar class="navbar">
 
     <span class="logo">
-        Grupo Financiero Altiora
+        <h1>Grupo Financiero Altiora</h1>
     </span>
 
     <span class="spacer"></span>
 
-    <button mat-button>
-        Cerrar sesión
+    <button
+    class="navbar-button"
+    (click)="logout()">
+    Cerrar sesión
     </button>
 
 </mat-toolbar>

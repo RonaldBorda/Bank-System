@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+
+<div class="dashboard-container">
+
+    <app-sidebar></app-sidebar>
+
+    <div class="content">
+
+        <div class="transfer-card">
+
+            <h2>Transferencia bancaria</h2>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Cuenta origen</mat-label>
+
+                <mat-select [(ngModel)]="cuentaOrigenId">
+
+                    <mat-option
+                        *ngFor="let account of accounts"
+                        [value]="account._id">
+
+                        {{ account.numeroCuenta }}
+
+                    </mat-option>
+
+                </mat-select>
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Cuenta destino</mat-label>
+
+                <input
+                    matInput
+                    [(ngModel)]="numeroCuentaDestino">
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Monto</mat-label>
+
+                <input
+                    matInput
+                    type="number"
+                    [(ngModel)]="monto">
+
+            </mat-form-field>
+
+            <button
+                class="transfer-button"
+                (click)="transfer()">
+
+                Realizar transferencia
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

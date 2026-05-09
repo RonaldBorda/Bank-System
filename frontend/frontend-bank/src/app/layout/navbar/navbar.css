@@ -3,11 +3,38 @@
     color: white;
 }
 
-.logo {
-    font-size: 20px;
-    font-weight: 600;
-}
 
+.logo h1{
+    font-weight: bold;
+    font-size: 35px;
+}
 .spacer {
     flex: 1;
+}
+.navbar-button {
+
+    width: 150px;
+
+    padding: 14px;
+
+    background-color: #e63434;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 6px;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.navbar-button:hover {
+
+    background-color: #8b1111;;
 }

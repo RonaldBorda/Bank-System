@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(237, 237, 237);
+    background: linear-gradient(135deg, #0A1F44, #3d75c9);
 }
 
 .login-card {
@@ -14,10 +14,11 @@
     flex-direction: column;
     gap: 20px;
 
+
 }
 .login-card h1{
     text-align: center;
-    color: #4d71ff;
+    color: #163D77;
 }
 .login-button {
 
@@ -25,7 +26,7 @@
 
     padding: 14px;
 
-    background-color: #686666;
+    background-color: #163D77;
 
     color: white;
 
