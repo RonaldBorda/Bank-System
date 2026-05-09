@@ -1,1 +1,34 @@
-<p>login works!</p>
+<div class="login-container">
+
+    <mat-card class="login-card">
+
+        <h1>Grupo Financiero Altiora</h1>
+        <p>Ingresa tu correo y contraseña</p>
+
+        <form>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Correo</mat-label>
+
+                <input matInput type="email" [(ngModel)]="correo" name="correo">
+
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+
+                <mat-label>Contraseña</mat-label>
+
+                <input matInput type="password" [(ngModel)]="password" name="password">
+
+            </mat-form-field>
+
+            <button class="login-button" (click)="login()">
+                Iniciar sesión
+            </button>
+
+        </form>
+
+    </mat-card>
+
+</div>
