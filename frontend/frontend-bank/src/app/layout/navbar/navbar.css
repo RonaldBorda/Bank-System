@@ -1,0 +1,13 @@
+.navbar {
+    background-color: #0A1F44;
+    color: white;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.spacer {
+    flex: 1;
+}
