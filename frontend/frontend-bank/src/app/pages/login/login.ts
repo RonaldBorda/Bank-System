@@ -32,7 +32,9 @@ export class LoginComponent {
     this.authService.login(data).subscribe({
       next: (response: any) => {
         localStorage.setItem('token', response.token);
+        setTimeout(() => {
         this.router.navigate(['/dashboard']);
+        }, 100);
       },
       error: (error) => {
         console.log(error);
