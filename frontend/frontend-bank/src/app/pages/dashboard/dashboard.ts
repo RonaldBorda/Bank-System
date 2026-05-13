@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit{
     private cdr: ChangeDetectorRef
   ) {}
   ngOnInit() {
-
+ 
     this.accountService.getAccounts().subscribe({
       next: (response: any) => {
         this.accounts = response;
